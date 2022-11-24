@@ -15,6 +15,14 @@ const compare = (a, b) => {
   return 0;
 };
 
+const shuffle = (deck) => {
+  return [...deck].map((_, i, deckCopy) => {
+    let rand = i + (Math.floor( Math.random() * (deckCopy.length - i)));
+    [deckCopy[rand], deckCopy[i]] = [deckCopy[i], deckCopy[rand]];
+    return deckCopy[i];
+  });
+}
+
 export const fakeSleep = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -27,7 +35,7 @@ export const createDeck = () => {
       deck.push(`${number}${suit}`);
     }
   }
-  return deck.sort(() => 0.5 - Math.random());
+  return shuffle(deck);
 }
 
 export const getCard = (deck) => { 
