@@ -1,0 +1,23 @@
+body, html {
+  background-color: #2F4F30;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.card {
+  width: 150px;
+  display: inline-block;
+  position: relative;
+  left: 100px;
+  margin-left: -75px;
+}
+
+.card-container {
+  display: block;
+  margin-left: -125px;
+  height: 230px;
+}
+
+.alert-min-width {
+  min-width: 300px;
+}
