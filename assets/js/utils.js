@@ -17,7 +17,7 @@ const compare = (a, b) => {
 
 const shuffle = (deck) => {
   return [...deck].map((_, i, deckCopy) => {
-    let rand = i + (Math.floor( Math.random() * (deckCopy.length - i)));
+    const rand = i + (Math.floor(Math.random() * (deckCopy.length - i)));
     [deckCopy[rand], deckCopy[i]] = [deckCopy[i], deckCopy[rand]];
     return deckCopy[i];
   });
