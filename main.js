@@ -1,10 +1,13 @@
+// utils
 import {
   getCard,
   createDeck,
   createCardElement,
   recalculateScore,
-  fakeSleep,
-} from "./assets/js/utils.js";
+  sleep,
+} from "./src/js/utils";
+// style
+import './src/css/styles.css';
 
 (() => {
   'use strict';
@@ -128,7 +131,7 @@ import {
     showDealerCards();
 
     while(dealerScore !== 21 && dealerScore < playerScore) {
-      await fakeSleep(500);
+      await sleep(500);
       dealerGetCard();
     }
 
@@ -144,13 +147,13 @@ import {
 
   const initGame = async () => {
     disableAllButtons();
-    await fakeSleep(500);
+    await sleep(500);
     playerGetCard();
-    await fakeSleep(500);
+    await sleep(500);
     dealerGetCard();
-    await fakeSleep(500);
+    await sleep(500);
     playerGetCard();
-    await fakeSleep(500);
+    await sleep(500);
     dealerGetCard(true);
 
     if (dealerScore === 21) {

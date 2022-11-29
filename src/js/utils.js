@@ -13,7 +13,7 @@ const compare = (a, b) => {
   if (a === 'A') return 1;
   if (b === 'A') return -1;
   return 0;
-};
+}
 
 const shuffle = (deck) => {
   return [...deck].map((_, i, deckCopy) => {
@@ -23,7 +23,7 @@ const shuffle = (deck) => {
   });
 }
 
-export const fakeSleep = (ms) => {
+export const sleep = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
@@ -56,7 +56,7 @@ export const recalculateScore = (cards) => {
 
 export const createCardElement = (card) => {
   const img = document.createElement('img');
-  img.src = `./assets/playing_cards/${card}.png`;
+  img.src = `./playing_cards/${card}.png`;
   img.classList.add('card');
   return img;
 }
